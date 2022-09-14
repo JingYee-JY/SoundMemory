@@ -1,0 +1,261 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Lilita One', cursive;
+}
+
+body {
+  background-color: #D7D7D7;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start,
+.selection,
+.game,
+.final{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    z-index: 2;
+    gap: 80px;
+    width: 100%;
+    height: 100%;
+    background-color: #D7D7D7;
+}
+.final{
+  gap: 25px;
+}
+.game{
+  z-index: 0 !important;
+  gap: 25px;
+}
+
+.preview{
+  width: 80%;
+}
+
+.title{
+  width: 40%;
+}
+
+.startButton, .againButton, .homeButton{
+  width: 100%;
+  position: relative;
+  align-self: center;
+  background-color: #0A4554;
+  box-shadow: 0px 8px #062D37;
+  border: 0px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5% 5%;
+  margin-bottom: 10px;
+}
+
+.easy, .normal, .hard{
+  width: 100%;
+  position: relative;
+  align-self: center;
+  background-color: #FFFCFA;
+  box-shadow: 0px 8px #0A4554;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 2.5%;
+  margin-bottom: 25px;
+  color: #0A4554;
+  font-size: 25px;
+}
+
+.homeButton{
+  margin-top: 10px;
+  background-color: #FFFCFA;
+  box-shadow: 0px 8px #0A4554;
+}
+
+.startButton p, .startGame p ,.easy p, .normal p, .hard p, .free p, .homeButton p{
+  margin: 3%;
+  margin-right: 6%;
+}
+
+.word{
+  font-size: 20px !important;
+  width: 100%;
+  color: #0A4554;
+  margin: 0 !important;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+}
+
+.words{
+  font-size: 20px !important;
+  width: 100%;
+  color: white;
+  margin: 0 !important;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+}
+
+.arrowHead{
+  margin-right: 10px;
+  max-width: 15px;
+  height: auto;
+}
+
+.hide{
+  display: none;
+  visibility: hidden;
+}
+
+.choice{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 2.5%;
+}
+
+.choice p{
+  color: #0A4554;
+  font-size: 20px;
+}
+
+.currentSong{
+  background-color: #0A4554;
+  color: white;
+  padding: 2.5% 5%;
+  font-size: 25px;
+  border-radius: 20px;
+}
+
+.totalNotes{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0A4554;
+}
+
+.totalNotes p{
+  font-size: 22px;
+  margin: 5px auto;
+}
+
+.score{
+  font-size: 30px !important;
+}
+
+.notes{
+  background-color: #0A4554;
+  color: white;
+  font-size: 40px;
+  border-radius: 50px;
+  padding: 7% 10%;
+}
+
+.notes p{
+  margin: 0px;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 3);
+  width: var(--width);
+}
+
+.white {
+  --width: 50px;
+}
+
+.white img, .black img{
+  width: 100%;
+}
+
+.white.active,
+.black.active {
+  opacity: 50%;
+}
+
+.black {
+  --width: 30px;
+  background-color: #0A4554;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.optional{
+  width: 93%;
+  height: 15%;
+  border-radius: 10px;
+  padding: 2.5%;
+  background-color: white;
+  color: #51777F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.optional img{
+  margin: 0 auto;
+  width: 20%;
+  height: auto;
+}
+.optional p{
+  margin: 0 auto;
+}
+
+.wellDone{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wellDone img{
+  width: 50%;
+  margin: 0;
+}
+
+.wellDone p{
+  color: #0A4554;
+  font-size: 35px;
+  margin: 10px;
+}
+
+.buttons{
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: auto;
+  padding: 2.5%;
+}
+
+  /*mobile*/
+@media screen and (max-width: 767px){
+    .startButton, .playAgain {
+    width: calc(100% - 70px);
+    justify-content: center;
+    align-items: center;
+    }
+}

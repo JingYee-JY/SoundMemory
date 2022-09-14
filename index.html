@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Piano</title>
+  <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Lilita One">
+</head>
+<body>
+  <div class="start">
+    <img class="title" src="./img/title.png">
+    <img class="preview" src="./img/preview.png">
+    <button class="startButton">
+        <p class="words"><img src="./img/arrow.png" class="arrowHead"> START GAME</p>
+    </button>
+</div>
+<div class="selection hide">
+  <img class="title" src="./img/title.png">
+  <div class="choice">
+      <p>Songs</p>
+      <button class="easy"><p>Basic</p></button>
+      <button class="normal"><p>Little Star</p></button>
+      <button class="hard"><p>Happy Birthday</p></button>
+  </div>
+</div>
+  <div class="game">
+    <div class="currentSong">Basic</div>
+    <div class="totalNotes">
+      <p>Notes</p>
+      <p class="score"></p>
+    </div>
+    <div class="notes">-</div>
+    <div class="piano">
+      <div data-note="C" class="key white C">
+        <img src="./img/c.png">
+      </div>
+      <div data-note="Db" class="key black Db">
+        <img src="./img/black.png">
+      </div>
+      <div data-note="D" class="key white D">
+        <img src="./img/d.png">
+      </div>
+      <div data-note="Eb" class="key black Eb">
+        <img src="./img/black.png">
+      </div>
+      <div data-note="E" class="key white E">
+        <img src="./img/e.png">
+      </div>
+      <div data-note="F" class="key white F">
+        <img src="./img/f.png">
+      </div>
+      <div data-note="Gb" class="key black Gb">
+        <img src="./img/black.png">
+      </div>
+      <div data-note="G" class="key white G">
+        <img src="./img/g.png">
+      </div>
+      <div data-note="Ab" class="key black Ab">
+        <img src="./img/black.png">
+      </div>
+      <div data-note="A" class="key white A">
+        <img src="./img/a.png">
+      </div>
+      <div data-note="Bb" class="key black Bb">
+        <img src="./img/black.png">
+      </div>
+      <div data-note="B" class="key white B">
+        <img src="./img/b.png">
+      </div>
+    </div>
+    <div class="optional"></div>
+  </div>
+
+  <div class="final hide">
+    <img class="title" src="./img/title.png">
+      <div class="wellDone">
+        <img c src="./img/wellDone.png">
+      <p>Well Done!</p>
+      </div>
+      <div class="buttons">
+        <button class="againButton">
+            <p class="words"><img src="./img/again.png" class="arrowHead">Play again</p>
+        </button>
+        <button class="homeButton">
+            <p class="word"><img src="./img/home.png" class="arrowHead">Back to Home</p>
+        </button>
+    </div>
+  </div>
+
+  <audio id="C" src="notes/C.mp3"></audio>
+  <audio id="Db" src="notes/Db.mp3"></audio>
+  <audio id="D" src="notes/D.mp3"></audio>
+  <audio id="Eb" src="notes/Eb.mp3"></audio>
+  <audio id="E" src="notes/E.mp3"></audio>
+  <audio id="F" src="notes/F.mp3"></audio>
+  <audio id="Gb" src="notes/Gb.mp3"></audio>
+  <audio id="G" src="notes/G.mp3"></audio>
+  <audio id="Ab" src="notes/Ab.mp3"></audio>
+  <audio id="A" src="notes/A.mp3"></audio>
+  <audio id="Bb" src="notes/Bb.mp3"></audio>
+  <audio id="B" src="notes/B.mp3"></audio>
+</body>
+</html>
