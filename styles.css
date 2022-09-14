@@ -253,9 +253,116 @@ body {
 
   /*mobile*/
 @media screen and (max-width: 767px){
-    .startButton, .playAgain {
+    .startButton, .againButton {
     width: calc(100% - 70px);
     justify-content: center;
     align-items: center;
     }
+}
+
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  .startButton, .againButton, .easy,.normal,.hard, .homeButton{
+    padding: 3% 2.5%;
+    max-width: 350px;
+  }
+
+  .againButton, .homeButton{
+    padding: 6% 3%;
+  }
+
+  .preview{
+    max-width: 500px;
+  }
+
+  .word, .words{
+    font-size: 30px !important;
+  }
+
+  .arrowHead{
+    max-width: 25px;
+    margin-right: 15px;
+  }
+
+  .choice p {
+    font-size: 40px;
+  }
+
+  .currentSong{
+    font-size: 50px;
+    border-radius: 30px;
+  }
+
+  .totalNotes p{
+    font-size: 50px;
+  }
+
+  .score{
+    font-size: 70px !important;
+  }
+
+  .notes{
+    font-size: 70px;
+    padding: 7% 9%;
+    border-radius: 100px;
+  }
+
+  .white {
+    --width: 100px;
+  }
+  
+  .black{
+    --width: 60px;
+  }
+
+  .optional{
+    width: 85%;
+    margin-top: 30px;
+  }
+
+  .optional img{
+    width: 17%;
+  }
+
+  .optional p{
+    font-size: 45px;
+  }
+
+  .wellDone img{
+    width: 40%;
+  }
+
+  .wellDone p{
+    font-size: 50px;
+  }
+  .homeButton{
+    margin-top: 30px;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width:1200px){
+  .start,.selection, .game, .final{
+      max-width: 400px;
+      margin: 0 auto;
+  }
+  .game{
+    gap: 20px
+  }
+  .playAgain, .startButton{
+      padding: 3.5%;
+      max-width: 225px;
+  }
+  .startButton{
+      margin-top: 30px;
+  }
+  .wellDone img{
+    width: 40%;
+  }
+  .optional img{
+    width: 15%;
+  }
+  .optional p{
+    font-size: 25px;
+  }
 }

@@ -88,7 +88,7 @@ function playNote(key) {
         <img src="./img/right.png">
         <p>Note ${current} Clear!<p>`
         current += 1
-        play = playerInput = computerInput = false
+        playerInput = computerInput = false
         console.log(play)
         Question()
         return
@@ -103,7 +103,7 @@ function playNote(key) {
         Question()
         return
       }
-      else{
+      if(computerInput == true){
         computerInput = false
         playerInput = false
         play = true
