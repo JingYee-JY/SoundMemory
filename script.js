@@ -23,11 +23,16 @@ let song
 let play
 let playerInput
 let computerInput
+let computerSong
 let current
 let answer
 let total
 
 const basicSong = ["C", "D", "E", "F", "G", "A", "B"] 
+
+const starSong = ["C","C","G","G", "A","A", "G"] 
+
+const birthdaySong = ["C", "D", "C", "F", "E", "C", "D", "E","D", "G"] 
 
 startButton.addEventListener("click", () => {
   start.classList.add("hide")
@@ -37,7 +42,28 @@ startButton.addEventListener("click", () => {
 basic.addEventListener("click", () => {
   selection.classList.add("hide")
   game.classList.remove("hide")
+  computerSong = 0
   song = basicSong
+  current = 1
+  play = computerInput = playerInput = false
+  Question()
+})
+
+star.addEventListener("click", () => {
+  selection.classList.add("hide")
+  game.classList.remove("hide")
+  song = starSong
+  computerSong = 0
+  current = 1
+  play = computerInput = playerInput = false
+  Question()
+})
+
+birthday.addEventListener("click", () => {
+  selection.classList.add("hide")
+  game.classList.remove("hide")
+  song = birthdaySong
+  computerSong = 0
   current = 1
   play = computerInput = playerInput = false
   Question()
@@ -45,6 +71,7 @@ basic.addEventListener("click", () => {
 
 playAgain.addEventListener("click", () => {
   final.classList.add("hide")
+  computerSong = 0 
   current = 1
   play = computerInput = playerInput = false
   Question()
@@ -88,6 +115,7 @@ function playNote(key) {
         <img src="./img/right.png">
         <p>Note ${current} Clear!<p>`
         current += 1
+        computerSong = 0
         playerInput = computerInput = false
         console.log(play)
         Question()
@@ -98,15 +126,22 @@ function playNote(key) {
         optional.innerHTML = `
         <img src="./img/wrong.png">
         <p>Note ${current} Try again!<p>`
+        computerSong = 0
         play = playerInput = computerInput = false
         console.log(play)
         Question()
         return
       }
-      if(computerInput == true){
+      if(computerInput == true && computerSong == (current - 1)){
         computerInput = false
         playerInput = false
         play = true
+        return
+      }
+      if(computerInput == true && computerSong != (current - 1)){
+        computerInput = false
+        computerSong += 1
+        Question()
       }
     })
   }
@@ -120,11 +155,10 @@ function Question(){
     final.classList.remove("hide")
     return
   }
+  console.log(computerSong)
   answer = song[current - 1]
   score.innerHTML = `${current}/${song.length}`
-  let question = document.querySelector(`.${song[current - 1]}`)
-  
-  console.log(question)
+  let question = document.querySelector(`.${song[computerSong]}`)
   let delay = setTimeout(() => {
     optional.innerHTML =""
     computerInput = true
