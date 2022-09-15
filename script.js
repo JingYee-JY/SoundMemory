@@ -14,6 +14,7 @@ const optional =  document.querySelector(".optional")
 const playAgain = document.querySelector(".againButton")
 const home = document.querySelector(".homeButton")
 const final = document.querySelector(".final");
+const currentSong = document.querySelector(".currentSong");
 
 const keys = document.querySelectorAll('.key')
 const whiteKeys = document.querySelectorAll('.key.white')
@@ -32,7 +33,7 @@ const basicSong = ["C", "D", "E", "F", "G", "A", "B"]
 
 const starSong = ["C","C","G","G", "A","A", "G"] 
 
-const birthdaySong = ["C", "D", "C", "F", "E", "C", "D", "E","D", "G"] 
+const birthdaySong = ["C","C", "D", "C", "F", "E", "C", "C", "D", "C","G", "F"] 
 
 startButton.addEventListener("click", () => {
   start.classList.add("hide")
@@ -45,6 +46,7 @@ basic.addEventListener("click", () => {
   computerSong = 0
   song = basicSong
   current = 1
+  currentSong.innerHTML = `Basic`
   play = computerInput = playerInput = false
   Question()
 })
@@ -55,6 +57,7 @@ star.addEventListener("click", () => {
   song = starSong
   computerSong = 0
   current = 1
+  currentSong.innerHTML = `Little Star`
   play = computerInput = playerInput = false
   Question()
 })
@@ -62,6 +65,7 @@ star.addEventListener("click", () => {
 birthday.addEventListener("click", () => {
   selection.classList.add("hide")
   game.classList.remove("hide")
+  currentSong.innerHTML = `Happy Birthday`
   song = birthdaySong
   computerSong = 0
   current = 1
