@@ -256,7 +256,7 @@ body {
 
   /*mobile*/
 @media screen and (max-width: 767px){
-    .startButton, .againButton {
+    .startButton {
     width: calc(100% - 70px);
     justify-content: center;
     align-items: center;
