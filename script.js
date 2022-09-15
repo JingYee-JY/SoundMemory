@@ -24,7 +24,6 @@ let song
 let play
 let playerInput
 let computerInput
-let computerSong
 let current
 let answer
 let total
@@ -43,7 +42,6 @@ startButton.addEventListener("click", () => {
 basic.addEventListener("click", () => {
   selection.classList.add("hide")
   game.classList.remove("hide")
-  computerSong = 0
   song = basicSong
   current = 1
   currentSong.innerHTML = `Basic`
@@ -55,7 +53,6 @@ star.addEventListener("click", () => {
   selection.classList.add("hide")
   game.classList.remove("hide")
   song = starSong
-  computerSong = 0
   current = 1
   currentSong.innerHTML = `Little Star`
   play = computerInput = playerInput = false
@@ -67,7 +64,6 @@ birthday.addEventListener("click", () => {
   game.classList.remove("hide")
   currentSong.innerHTML = `Happy Birthday`
   song = birthdaySong
-  computerSong = 0
   current = 1
   play = computerInput = playerInput = false
   Question()
@@ -75,7 +71,6 @@ birthday.addEventListener("click", () => {
 
 playAgain.addEventListener("click", () => {
   final.classList.add("hide")
-  computerSong = 0 
   current = 1
   play = computerInput = playerInput = false
   Question()
@@ -136,17 +131,9 @@ function playNote(key) {
         Question()
         return
       }
-      if(computerInput == true && computerSong == (current - 1)){
         computerInput = false
         playerInput = false
         play = true
-        return
-      }
-      if(computerInput == true && computerSong != (current - 1)){
-        computerInput = false
-        computerSong += 1
-        Question()
-      }
     })
   }
 }
@@ -159,10 +146,10 @@ function Question(){
     final.classList.remove("hide")
     return
   }
-  console.log(computerSong)
+
   answer = song[current - 1]
   score.innerHTML = `${current}/${song.length}`
-  let question = document.querySelector(`.${song[computerSong]}`)
+  let question = document.querySelector(`.${song[current - 1]}`)
   let delay = setTimeout(() => {
     optional.innerHTML =""
     computerInput = true
