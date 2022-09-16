@@ -156,5 +156,5 @@ function Question(){
     play = true
     notes.innerHTML = `${answer}`
     playNote(question)
-  }, 500);
+  }, 800);
 }
