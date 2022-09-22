@@ -369,3 +369,9 @@ body {
     font-size: 25px;
   }
 }
+
+@media screen and (max-width:767px){
+  .endTitle {
+    display: none;
+  }
+}

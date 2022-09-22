@@ -12,7 +12,6 @@ const score =  document.querySelector(".score")
 const notes =  document.querySelector(".notes")
 const optional =  document.querySelector(".optional")
 const playAgain = document.querySelector(".againButton")
-const home = document.querySelector(".homeButton")
 const final = document.querySelector(".final");
 const currentSong = document.querySelector(".currentSong");
 
@@ -71,14 +70,7 @@ birthday.addEventListener("click", () => {
 
 playAgain.addEventListener("click", () => {
   final.classList.add("hide")
-  current = 1
-  play = computerInput = playerInput = false
-  Question()
-})
-
-home.addEventListener("click", () => {
-  final.classList.add("hide")
-  selection.classList.remove("hide")
+  start.classList.remove("hide")
 })
 
 keys.forEach(key => {
@@ -112,7 +104,8 @@ function playNote(key) {
         optional.style.color = "#51777F"
         optional.innerHTML = `
         <img src="./img/right.png">
-        <p>Note ${current} Clear!<p>`
+        <!--<p>Note ${current} Clear!<p>-->
+        <p>That's right!<p>`
         current += 1
         computerSong = 0
         playerInput = computerInput = false
