@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable =no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -85,11 +85,16 @@
         <button class="againButton">
             <p class="words"><img src="./img/again.png" class="arrowHead">Play again</p>
         </button>
-        <button class="homeButton" onclick="window.location.href='https://gimme.sg/activations/dementia/';">
+        <button class="homeButton">
             <p class="word"><img src="./img/home.png" class="arrowHead">Back to home</p>
         </button>
     </div>
   </div>
+
+  <audio id="click" src="notes/click.wav"></audio>
+  <audio id="basicNotes" src="notes/basic.mp3"></audio>
+  <audio id="littleStar" src="notes/littleStar.mp3"></audio>
+  <audio id="happyBirthday" src="notes/birthday.mp3"></audio>
 
   <audio id="C" src="notes/C.mp3"></audio>
   <audio id="Cb" src="notes/Cb.mp3"></audio>

@@ -90,6 +90,28 @@ body {
   margin-right: 6%;
 }
 
+.startButton:active,.easy:active,.normal:active,.hard:active,.againButton:active,.homeButton:active{
+  animation: animate 0.2s;
+}
+
+@keyframes animate{
+  0%{
+      transform: rotate(0deg) translateX(0px);
+  }
+  25%{
+      transform: rotate(-20deg) translateX(-10px);
+  }
+  50%{
+      transform: rotate(0deg) translateX(0px);
+  }
+  75%{
+      transform: rotate(20deg) translateX(10px);
+  }
+  100%{
+      transform: rotate(0deg) translateX(0px);
+  }
+}
+
 .word{
   font-size: 20px !important;
   width: 100%;
@@ -184,7 +206,7 @@ body {
 }
 
 .white {
-  --width: 50px;
+  --width: 57px;
 }
 
 .white img, .black img{
@@ -193,11 +215,11 @@ body {
 
 .white.active,
 .black.active {
-  opacity: 50%;
+  opacity: 0%;
 }
 
 .black {
-  --width: 30px;
+  --width: 35px;
   background-color: #0A4554;
   margin-left: calc(var(--width) / -2);
   margin-right: calc(var(--width) / -2);
