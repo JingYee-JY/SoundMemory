@@ -277,9 +277,10 @@ function Question(){
     play = true
     notes.innerHTML = `${answer}`
     const noteAudio = document.getElementById(question.dataset.note)
-    noteAudio.currentTime = 0
-    noteAudio.play()
     question.classList.add('active')
+    let delay = setTimeout(() => {
+      question.classList.remove('active')
+    }, 1000);
   }, 800);
 }
 
