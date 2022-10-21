@@ -215,7 +215,7 @@ body {
 
 .white.active,
 .black.active {
-  opacity: 0%;
+  filter: brightness(40%);
 }
 
 .black {
