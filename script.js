@@ -274,11 +274,12 @@ function Question(){
   
   let delay = setTimeout(() => {
     optional.innerHTML =""
-    computerInput = true
-
     play = true
     notes.innerHTML = `${answer}`
-    playNote(question)
+    const noteAudio = document.getElementById(question.dataset.note)
+    noteAudio.currentTime = 0
+    noteAudio.play()
+    question.classList.add('active')
   }, 800);
 }
 
